@@ -59,7 +59,8 @@ $$x_{i=1,\ \cdots,\ n} \text{ es un vector con los valores de los atributos, }x_
 
 $$y_{i=1,\ \cdots,\ n} \text{ es la variable independiente a predecir }\in Y \text{, puede ser una categoría o un valor continuo }\in \mathbb{R}$$
 
-$$\text{Podemos describir a la base de datos como } \{(x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{n},y_{n})\} \text{, } \forall_{i=1,\ \cdots,\ n}\ (x_{i},y_{i}) \text{ es una relación de la variable aleatoria multidimensional} (x,y)$$
+$$\text{Podemos describir a la base de datos como } \{(x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{n},y_{n})\} $$
+$$ \forall_{i=1,\ \cdots,\ n}\ (x_{i},y_{i}) \text{ es una relación de la variable aleatoria multidimensional } (x,y)$$
 
 $$ \text{El objetivo del aprendizaje automatizado supervisado es encontrar } f: X\rightarrow Y$$
 
@@ -109,7 +110,7 @@ $$ \text{Buscamos } f \text{ tal que minimiza la función.}$$
 
 Como ejemplo podemos pensar una regresión lineal simple en la que buscamos la recta perteneciente al conjunto $$C$$ de polinomios de grado uno.
 
-INTERTAR IMAGEN CON fc ADENTRO DE UN CIRCULO y f AFUERA
+![F](./img/ffc.png)
 
 Donde $$f$$ es la mejor función (no la conozco y no la voy a conocer) y $$f_{C}$$ es la función que minimiza el error teórico. 
 El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos y tampoco conocemos $$f_{C}$$ por lo que $$f_{C}$$ tampoco la conozco y no la voy a conocer.
