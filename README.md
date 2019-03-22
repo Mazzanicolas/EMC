@@ -35,7 +35,7 @@ Podemos separarlas en dos tipos, bases de datos con etiqueta (o *label*) y sin e
 
 Las bases de datos con etiqueta son utilizadas para el aprendizaje supervisado.
 
-|$a_{1}$|$a_{2}$|$a_{3}$|$\cdots$|$a_{m}$|$y$|
+|$$a_{1}$$|$a_{2}$|$a_{3}$|$\cdots$|$a_{m}$|$y$|
 |-|-|-|-|-|-|
 |||$x_{1}$|||$y_{1}$|
 |||$x_{2}$|||$y_{2}$|

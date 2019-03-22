@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="estadistica-multivariada-computacional">Estadistica Multivariada Computacional</h1>
+<p>Estadistica Multivariada Computacional 2019, basado en las clases de Mathias Bourel (IMERL).</p>
+<h1 id="%C3%ADndice">Índice</h1>
+<pre class="hljs"><code><div>    0
+        .1
+        .2
+        .3
+    1
+        .1
+        .2
+    2
+</div></code></pre>
+<h2 id="0-tipos-de-aprendizaje-automatizado">0 Tipos de aprendizaje automatizado</h2>
+<ul>
+<li>Aprendizaje supervisado</li>
+<li>Aprendizaje no supervizado</li>
+<li><em>Aprendizaje por refuerzo</em></li>
+</ul>
+<h2 id="01-aprendizaje-supervisado">0.1 Aprendizaje supervisado</h2>
+<h2 id="02-aprendizaje-no-supervizado">0.2 Aprendizaje no supervizado</h2>
+<h2 id="03-aprendizaje-por-refuerzo">0.3 Aprendizaje por refuerzo</h2>
+<h2 id="1-bases-de-datos">1 Bases de datos</h2>
+<p>Las bases de datos también conocidas como <em>datasets</em>, FILL THIS HERE.
+Podemos separarlas en dos tipos, bases de datos con etiqueta (o <em>label</em>) y sin etiquetar.</p>
+<h2 id="11-bases-de-datos-con-etiqueta">1.1 Bases de datos con etiqueta</h2>
+<p>Las bases de datos con etiqueta son utilizadas para el aprendizaje supervisado.</p>
+<table>
+<thead>
+<tr>
+<th>$a_{1}$</th>
+<th>$a_{2}$</th>
+<th>$a_{3}$</th>
+<th>$\cdots$</th>
+<th>$a_{m}$</th>
+<th>$y$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{1}$</td>
+<td></td>
+<td></td>
+<td>$y_{1}$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{2}$</td>
+<td></td>
+<td></td>
+<td>$y_{2}$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{2}$</td>
+<td></td>
+<td></td>
+<td>$y_{3}$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$\vdots$</td>
+<td></td>
+<td></td>
+<td>$\vdots$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{n}$</td>
+<td></td>
+<td></td>
+<td>$y_{n}$</td>
+</tr>
+</tbody>
+</table>
+<p>$a_{i=1,\ \cdots,\ m} \in A,\  A={\ atributos\ }$</p>
+<p>$x_{i=1,\ \cdots,\ n}$ es un vector con los valores de los atributos, $x_{i}\subset X$, $X$ son las características explicativas.</p>
+<p>$y_{i=1,\ \cdots,\ n}$ es la variable independiente a predecir $\in Y$, puede ser una categoría o un valor continuo $\in \mathbb{R}$</p>
+<p>Podemos describir a la base de datos como ${(x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{n},y_{n})}$, $\forall_{i=1,\ \cdots,\ n}\ (x_{i},y_{i})$ es una relación de la variable aleatoria multidimensional $(x,y)$</p>
+<p>El objetivo del aprendizaje automatizado supervisado es encontrar $f: X\rightarrow Y$</p>
+<h2 id="12-bases-de-datos-sin-etiqueta">1.2 Bases de datos sin etiqueta</h2>
+<p>Las bases de datos con etiqueta son utilizadas para el aprendizaje no supervisado.</p>
+<table>
+<thead>
+<tr>
+<th>$a_{1}$</th>
+<th>$a_{2}$</th>
+<th>$a_{3}$</th>
+<th>$\cdots$</th>
+<th>$a_{m}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{1}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{2}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{2}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$\vdots$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x_{n}$</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>$a_{i=1,\ \cdots,\ m} \in A,\  A={\ atributos\ }$</p>
+<p>$x_{i=1,\ \cdots,\ n}$ es un vector con los valores de los atributos, $x_{i}\subset X$</p>
+<h2 id="2-aprendizaje-automatizado">2 Aprendizaje automatizado</h2>
+<p>El objetivo del aprendizaje supervisado</p>
+<h2 id="21-funci%C3%B3n-de-perdida">2.1 Función de perdida</h2>
+<p>La función $L(y,u)$ cuantifica cual es la perdida de decir $u$ cuando el verdadero valores es $y$.</p>
+<p>Algunos ejemplos de funciones de error para diferentes problemas:</p>
+<ul>
+<li>
+<p>Clasificación: $L(y,u)=\mathbb{1_{{u\neq y}}} \left{\begin{matrix} 1 &amp; si &amp; u\neq y\  0 &amp; si &amp; u=y \end{matrix}\right.$</p>
+</li>
+<li>
+<p>Regresión: $L(y,u)=(y-u)^2$</p>
+</li>
+<li>
+<p>No supervisado: $L(u)=-log(u)$ <em>(verosimilitud)</em></p>
+</li>
+</ul>
+<p>Quiero encontrar una funcion $f$ que minimiza el <em>&quot;riesgo de perder&quot;</em>.</p>
+<h3 id="funci%C3%B3n-de-riesgo-te%C3%B3rica">Función de riesgo teórica:</h3>
+<p>$R_{L}(f)=\mathbb{E}[L(y,f(x))]$</p>
+<p>De donde $\mathbb{E}$ es la esperanza y $L(y,f(x))$ es la perdida, por lo tanto:</p>
+<p>$f_{C}=ar\underset{f}gmin \ R_{L}(f)= ar\underset{f}gmin \ \mathbb{E}[L(y,f(x))]$</p>
+<p>Buscamos $f$ tal que minimiza la función.</p>
+<p>Como ejemplo podemos pensar una regresión lineal simple en la que buscamos la recta perteneciente al conjunto $C$ de polinomios de grado uno.</p>
+<p>INTERTAR IMAGEN CON fc ADENTRO DE UN CIRCULO y f AFUERA</p>
+<p>Donde $f$ es la mejor función (no la conozco y no la voy a conocer) y $f_{C}$ es la función que minimiza el error teórico.
+El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos y tampoco conocemos $f_{C}$ por lo que $f_{C}$ tampoco la conozco y no la voy a conocer.</p>
+<p>Como esto no se puede resolver vamos a utilizar los datos. En vez de minimizar el riesgo teórico voy a querer encontrar una función que minimice el riesgo empírico:</p>
+<p>$R_{L,n}(f)=\frac{1}{n}\sum_{n}^{i=1}L(y_{i},f(x_{i}))$</p>
+<p>Esto lo puedo encontrar porque conozco la función de perdida y los datos.</p>
+
+</body>
+</html>
