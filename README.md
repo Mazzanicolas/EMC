@@ -113,7 +113,7 @@ Como ejemplo podemos pensar una regresión lineal simple en la que buscamos la r
 ![F](./img/ffc.png)
 
 Donde $$f$$ es la mejor función (no la conozco y no la voy a conocer) y $$f_{C}$$ es la función que minimiza el error teórico. 
-El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos y tampoco conocemos $$f_{C}$$ por lo que $$f_{C}$$ tampoco la conozco y no la voy a conocer.
+El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos y como tampoco conocemos $$f_{C}$$ por lo que $$f_{C}$$ no la voy a conocer.
 
 Como esto no se puede resolver vamos a utilizar los datos. En vez de minimizar el riesgo teórico voy a querer encontrar una función que minimice el riesgo empírico:
 
@@ -121,7 +121,10 @@ $$R_{L,n}(f)=\frac{1}{n}\sum_{n}^{i=1}L(y_{i},f(x_{i}))$$
 
 Esto lo puedo encontrar porque conozco la función de perdida y los datos.
 
+$$ \hat{f_{n}}=ar\underset{f}g\underset{\in}m\underset{C}in\ R_{L,n}(f)=ar\underset{f}g\underset{\in}m\underset{C}in\ \frac{1}{n}\sum_{n}^{i=1}L(y_{i},f(x_{i}))$$
 
+![F](./img/ffcfn.png)
 
+Cuantos más datos se tienen el riesgo empírico $$f_{n}$$ se aproxima más al teórico $$f_{c}$$
 
-
+$ar\underset{f}g\underset{\in}m\underset{C}in\ \frac{1}{n} \sum^{n}_{i=1}\ \mathbb{1}(y_{i}, f(x_{i}))$
