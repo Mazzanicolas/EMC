@@ -5,16 +5,24 @@ Estadistica Multivariada Computacional 2019, basado en las clases de Mathias Bou
 
 # Índice
 
-```
-    0
-        .1
-        .2
-        .3
-    1
-        .1
-        .2
-    2
-```
+
+[0 Tipos de aprendizaje automatizado](#0-Tipos-de-aprendizaje-automatizado)
+
+[0.1 Aprendizaje supervisado](#0.1-Aprendizaje-supervisado)
+
+[0.2 Aprendizaje no supervizado](#0.2-Aprendizaje-no-supervizado)
+
+[0.3 Aprendizaje por refuerzo](#0.3-Aprendizaje-por-refuerzo)
+
+[1 Bases de datos](#1-Bases-de-datos)
+
+[1.1 Bases de datos con etiqueta](#1.1-Bases-de-datos-con-etiqueta)
+
+[1.2 Bases de datos sin etiqueta](#1.2-Bases-de-datos-sin-etiqueta)
+
+[2 Aprendizaje automatizado](#2-Aprendizaje-automatizado)
+
+[2.1 Función de perdida](#2.1-Función-de-perdida)
 
 ## 0 Tipos de aprendizaje automatizado
 
@@ -47,13 +55,13 @@ Las bases de datos con etiqueta son utilizadas para el aprendizaje supervisado.
 
 $$a_{i=1,\ \cdots,\ m} \in A,\  A=\{\ atributos\ \}$$
 
-$$x_{i=1,\ \cdots,\ n}$$ es un vector con los valores de los atributos, $$x_{i}\subset X$$, $$X$$ son las características explicativas.
+$$x_{i=1,\ \cdots,\ n} \text{ es un vector con los valores de los atributos, }x_{i}\subset X \text{, } X \text{ son las características explicativas.}$$
 
-$$y_{i=1,\ \cdots,\ n}$$ es la variable independiente a predecir $$\in Y$$, puede ser una categoría o un valor continuo $$\in \mathbb{R}$$
+$$y_{i=1,\ \cdots,\ n} \text{ es la variable independiente a predecir }\in Y \text{, puede ser una categoría o un valor continuo }\in \mathbb{R}$$
 
-Podemos describir a la base de datos como $$\{(x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{n},y_{n})\}$$, $$\forall_{i=1,\ \cdots,\ n}\ (x_{i},y_{i})$$ es una relación de la variable aleatoria multidimensional $$(x,y)$$
+$$\text{Podemos describir a la base de datos como } \{(x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{n},y_{n})\} \text{, } \forall_{i=1,\ \cdots,\ n}\ (x_{i},y_{i}) \text{ es una relación de la variable aleatoria multidimensional} (x,y)$$
 
-El objetivo del aprendizaje automatizado supervisado es encontrar $$f: X\rightarrow Y$$
+$$ \text{El objetivo del aprendizaje automatizado supervisado es encontrar } f: X\rightarrow Y$$
 
 ## 1.2 Bases de datos sin etiqueta
 
@@ -69,7 +77,7 @@ Las bases de datos con etiqueta son utilizadas para el aprendizaje no supervisad
 
 $$a_{i=1,\ \cdots,\ m} \in A,\  A=\{\ atributos\ \}$$ 
 
-$$x_{i=1,\ \cdots,\ n}$$ es un vector con los valores de los atributos, $$x_{i}\subset X$$
+$$x_{i=1,\ \cdots,\ n} \text{ es un vector con los valores de los atributos, }x_{i}\subset X$$
 
 ## 2 Aprendizaje automatizado
 
@@ -77,27 +85,27 @@ El objetivo del aprendizaje supervisado
 
 ## 2.1 Función de perdida
 
-La función $$L(y,u)$$ cuantifica cual es la perdida de decir $$u$$ cuando el verdadero valores es $$y$$.
+$$ \text{La función } L(y,u) \text{ cuantifica cual es la perdida de decir } u \text{ cuando el verdadero valores es } y$$
 
 Algunos ejemplos de funciones de error para diferentes problemas:
 
-* Clasificación: $$L(y,u)=\mathbb{1_{\{u\neq y\}}} \left\{\begin{matrix} 1 & si & u\neq y\\  0 & si & u=y \end{matrix}\right.$$ 
+* $$ \text{Clasificación: } L(y,u)=\mathbb{1_{\{u\neq y\}}} \left\{\begin{matrix} 1 & si & u\neq y\\  0 & si & u=y \end{matrix}\right.$$ 
 
-* Regresión: $$L(y,u)=(y-u)^2$$
+* $$ \text{Regresión: } L(y,u)=(y-u)^2$$
 
-* No supervisado: $$L(u)=-log(u)$$ *(verosimilitud)*
+* $$ \text{ No supervisado: } L(u)=-log(u)  \text{(verosimilitud)}$$
 
-Quiero encontrar una funcion $$f$$ que minimiza el *"riesgo de perder"*.
+$$ \text{ Quiero encontrar una función } f \text{ que minimiza el "riesgo de perder" } $$
 
 ### Función de riesgo teórica:
 
 $$R_{L}(f)=\mathbb{E}[L(y,f(x))]$$
 
-De donde $$\mathbb{E}$$ es la esperanza y $$L(y,f(x))$$ es la perdida, por lo tanto:
+$$ \text{De donde } \mathbb{E} \text{ es la esperanza y } L(y,f(x)) \text{ es la perdida, por lo tanto: }$$
 
 $$f_{C}=ar\underset{f}gmin \ R_{L}(f)= ar\underset{f}gmin \ \mathbb{E}[L(y,f(x))]$$
 
-Buscamos $$f$$ tal que minimiza la función.
+$$ \text{Buscamos } f \text{ tal que minimiza la función.}$$
 
 Como ejemplo podemos pensar una regresión lineal simple en la que buscamos la recta perteneciente al conjunto $$C$$ de polinomios de grado uno.
 
