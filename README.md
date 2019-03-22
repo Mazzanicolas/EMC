@@ -34,7 +34,7 @@ Podemos separarlas en dos tipos, bases de datos con etiqueta (o *label*) y sin e
 ## 1.1 Bases de datos con etiqueta
 
 Las bases de datos con etiqueta son utilizadas para el aprendizaje supervisado.
-
+{% raw %}
 |$$a_{1}$$|$a_{2}$|$a_{3}$|$\cdots$|$a_{m}$|$y$|
 |-|-|-|-|-|-|
 |||$x_{1}$|||$y_{1}$|
@@ -42,7 +42,7 @@ Las bases de datos con etiqueta son utilizadas para el aprendizaje supervisado.
 |||$x_{2}$|||$y_{3}$|
 |||$\vdots$|||$\vdots$|
 |||$x_{n}$|||$y_{n}$|
-
+{% endraw %}
 $a_{i=1,\ \cdots,\ m} \in A,\  A=\{\ atributos\ \}$
 
 $x_{i=1,\ \cdots,\ n}$ es un vector con los valores de los atributos, $x_{i}\subset X$, $X$ son las características explicativas.
