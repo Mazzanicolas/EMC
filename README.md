@@ -5,6 +5,7 @@ Estadistica Multivariada Computacional 2019, basado en las clases de Mathias Bou
 
 # Índice
 
+[-1 Historia](#-1-Historia)
 
 [0 Tipos de aprendizaje automatizado](#0-Tipos-de-aprendizaje-automatizado)
 
@@ -23,6 +24,11 @@ Estadistica Multivariada Computacional 2019, basado en las clases de Mathias Bou
 [2 Aprendizaje automatizado](#2-Aprendizaje-automatizado)
 
 [2.1 Función de perdida](#2.1-Función-de-perdida)
+
+## -1 Historia
+
+<iframe width="100%" height="400" src="https://time.graphics/embed?v=1&id=247437" frameborder="0" allowfullscreen></iframe>
+<div><a  style="font-size: 12px; text-decoration: none;" title="Powered by Time.Graphics" href="https://time.graphics">Powered by Time.Graphics</a></div>
 
 ## 0 Tipos de aprendizaje automatizado
 
@@ -86,7 +92,7 @@ El objetivo del aprendizaje supervisado
 
 ## 2.1 Función de perdida
 
-$$ \text{La función } L(y,u) \text{ cuantifica cual es la perdida de decir } u \text{ cuando el verdadero valores es } y$$
+$$ \text{La función } L(y,u) \text{ cuantifica cual es la perdida de decir } u \text{ cuando el verdadero valor es } y$$
 
 Algunos ejemplos de funciones de error para diferentes problemas:
 
@@ -113,7 +119,7 @@ Como ejemplo podemos pensar una regresión lineal simple en la que buscamos la r
 ![F](./img/ffc.png)
 
 Donde $$f$$ es la mejor función (no la conozco y no la voy a conocer) y $$f_{C}$$ es la función que minimiza el error teórico. 
-El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos y como tampoco conocemos $$f_{C}$$ por lo que $$f_{C}$$ no la voy a conocer.
+El problema con este planteamiento es que la esperanza depende de la distribución de la variable aleatoria que no la tenemos por lo que $$f_{C}$$ no la voy a conocer.
 
 Como esto no se puede resolver vamos a utilizar los datos. En vez de minimizar el riesgo teórico voy a querer encontrar una función que minimice el riesgo empírico:
 
@@ -127,4 +133,4 @@ $$ \hat{f_{n}}=ar\underset{f}g\underset{\in}m\underset{C}in\ R_{L,n}(f)=ar\under
 
 Cuantos más datos se tienen el riesgo empírico $$f_{n}$$ se aproxima más al teórico $$f_{c}$$
 
-$ar\underset{f}g\underset{\in}m\underset{C}in\ \frac{1}{n} \sum^{n}_{i=1}\ \mathbb{1}(y_{i}, f(x_{i}))$
+$$ar\underset{f}g\underset{\in}m\underset{C}in\ \frac{1}{n} \sum^{n}_{i=1}\ \mathbb{1}(y_{i}, f(x_{i}))$$
